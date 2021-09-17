@@ -1,4 +1,4 @@
-function SayHello(name){
-		console.log("Hello," + name);
+const SayHello = (name) => {
+	return (`Hello ${name}`);
 	}
-	SayHello("sandesh");
+console.log(SayHello(`sandesh`));

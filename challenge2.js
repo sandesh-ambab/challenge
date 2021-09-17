@@ -1,20 +1,20 @@
 // First Method
-function sum(...arg){
+const sum = (...arg) => {
 		let total = 0;
 		for(const a of arg){
 			total += a;
 		}
-		console.log(total);
+		return total;
 		
 	}
-	sum(1,2,3,4);
+console.log(sum(1,2,3,4));
 
 // Second method 
 
-function sum(){
+const sum = (...args) => {
 	let x = 0;
-	for(var i=0;i<arguments.length;i++){
-		x = x+arguments[i];
+	for(let i = 0; i < args.length; i++){
+		x = x + args[i];
 	}
 	return x;
 }

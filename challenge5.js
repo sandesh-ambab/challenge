@@ -7,14 +7,14 @@ class Person {
 		this.lastname=lastname;
 		this.mobNumber=mobNumber;
 	}
-	fullName = (firstname, lastname) => { console.log (firstname,lastname) }
+	fullName = (firstname, lastname) => { console.log(`${firstname} ${lastname}`) }
 }
 	
 const createPerson = (firstname,lastname,mobNumber) => {
 
 	return new Promise((resolve, reject) => {
 	setTimeout(()=> {
-		if(users.some(number=>number.mobNumber === mobNumber)){
+		if(users.some(user=>user.mobNumber === mobNumber)){
 			reject("Phone number is already exist");
 		}
 		else{
@@ -29,6 +29,7 @@ const main = async() => {
 
 	try {
 		await createPerson("sandesh","chavan",9421178545)
+		
 	}
 	catch (error){
 		console.log(error)
